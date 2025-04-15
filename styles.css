@@ -1,7 +1,7 @@
 /* Global Styles */
 :root {
     --primary-color: #333333;
-    --secondary-color: #666666;
+    --secondary-color: #979797;
     --text-color: #333333;
     --background-color: #ffffff;
     --transition: all 0.3s ease;
@@ -51,7 +51,9 @@ body {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Hero Section */
@@ -85,6 +87,16 @@ body {
     color: var(--primary-color);
 }
 
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
 .tagline {
     font-size: 1.5rem;
     color: var(--secondary-color);
@@ -105,9 +117,22 @@ body {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-20px); }
-    60% { transform: translateY(-10px); }
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Tech Stack Slider */
@@ -148,6 +173,7 @@ body {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -186,7 +212,7 @@ body {
 .about-images img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Projects Section */
@@ -212,13 +238,13 @@ body {
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-image {
@@ -345,7 +371,7 @@ body {
 
 /* Experience Section */
 .experience {
-    padding: 80px 0;
+    padding: 30px 0;
     background-color: var(--background-color);
 }
 
@@ -357,109 +383,127 @@ body {
 }
 
 .timeline {
-    position: relative;
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px 0;
+    position: relative;
 }
 
-/* Timeline vertical line */
 .timeline::before {
     content: '';
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    background-color: var(--secondary-color);
+    left: 0;
     top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--secondary-color);
+    opacity: 0.3;
 }
 
 .timeline-item {
-    position: relative;
-    margin-bottom: 60px;
     display: flex;
     align-items: center;
-    width: 100%;
+    margin-bottom: 30px;
+    gap: 30px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    padding-left: 20px;
 }
 
-/* Timeline dot */
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 16px;
-    height: 16px;
-    background-color: var(--primary-color);
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background: var(--secondary-color);
     border-radius: 50%;
-    z-index: 1;
+    transform: translateX(-50%);
+}
+
+.timeline-item.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .company-logo {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
     border-radius: 50%;
     overflow: hidden;
-    position: absolute;
-    left: calc(50% - 150px);
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .company-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 10px;
+    padding: 8px;
 }
 
 .timeline-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    width: calc(50% - 80px);
-    position: relative;
-    margin-left: auto;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-    margin-left: 0;
-    margin-right: auto;
-}
-
-.timeline-item:nth-child(even) .company-logo {
-    left: auto;
-    right: calc(50% - 150px);
+    flex: 1;
 }
 
 .timeline-content h3 {
-    margin: 0 0 10px;
+    margin: 0;
     color: var(--text-color);
-    font-size: 1.4rem;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .timeline-content .company {
     color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 5px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    font-size: 1rem;
 }
 
-.timeline-content .period {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+.period,
+.period-lg {
+    color: var(--secondary-color);
 }
+
+
+.period {
+    display: none;
+}
+
+.period-lg {
+    display: block;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .timeline::before {
-        left: 40px;
+    .timeline-item {
+        flex-direction: row;
+        gap: 6px;
+        margin-bottom: 20px;
+        padding: 0 15px;
     }
 
-    .timeline-item::before {
-        left: 40px;
+    .company-logo {
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1rem;
+        margin-bottom: 2px;
+    }
+
+    .timeline-content .company {
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+    }
+
+    .experience h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
     }
 
     .company-logo {
@@ -468,13 +512,16 @@ body {
         height: 60px;
     }
 
-    .timeline-content {
-        width: calc(100% - 100px);
-        margin-left: 80px;
+    .period {
+        display: block;
     }
 
-    .timeline-item:nth-child(even) .timeline-content {
-        margin-left: 80px;
+    .period-lg {
+        display: none;
+    }
+
+    .timeline-content {
+        width: calc(100% - 100px);
     }
 
     .timeline-item:nth-child(even) .company-logo {
@@ -550,28 +597,4 @@ body {
 
 .submit-btn:hover {
     background-color: var(--primary-color);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-
-    .timeline-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .company-logo {
-        margin: 0 auto 1rem;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .tagline {
-        font-size: 1.2rem;
-    }
 }
