@@ -56,7 +56,8 @@ const technologies = [
     { name: 'Git', icon: '<img src="assets/images/icons/git-original-wordmark.svg" title="Git" alt="Git" width="40" height="40"/>&nbsp;' },
     { name: 'Filament', icon: '<img src="assets/images/icons/FVauPXtT_400x400.jpg" title="Filament" alt="Filament" width="40" height="40"/>&nbsp;' },
     { name: 'Inertia', icon: '<img src="assets/images/icons/47703742.png" title="Inertia" alt="Inertia" width="40" height="40"/>&nbsp;' },
-    { name: 'Livewire', icon: '<img src="assets/images/icons/laravel-livewire4180.logowik.com.webp" title="Liveware" alt="Liveware" width="40" height="40"/>&nbsp;' }
+    { name: 'Livewire', icon: '<img src="assets/images/icons/laravel-livewire4180.logowik.com.webp" title="Liveware" alt="Liveware" width="40" height="40"/>&nbsp;' },
+    { name: 'Docker', icon: '<img src="assets/images/icons/docker-plain.svg" title="Docker" alt="Docker" width="40" height="40"/>&nbsp;' }
 ];
 
 function createTechStack() {
