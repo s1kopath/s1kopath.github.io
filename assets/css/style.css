@@ -109,6 +109,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
+    cursor: pointer;
 }
 
 .scroll-indicator i {
@@ -135,59 +136,9 @@ body {
     }
 }
 
-/* Tech Stack Slider */
-.tech-stack-slider {
-    padding: 2rem 0;
-    background-color: var(--background-color);
-    overflow: hidden;
-}
-
-.slider-container {
-    width: 100%;
-    overflow: hidden;
-}
-
-.slider-track {
-    display: flex;
-    animation: scroll 30s linear infinite;
-    gap: 2rem;
-}
-
-.tech-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 100px;
-    padding: 1rem;
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-    transition: var(--transition);
-}
-
-.tech-icon:hover {
-    color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.tech-icon img {
-    width: 100%;
-    height: auto;
-}
-
 /* About Section */
 .about {
     padding: 5rem 0;
-    background-color: var(--background-color);
 }
 
 .about h2 {
@@ -202,6 +153,27 @@ body {
     margin-bottom: 2rem;
     text-align: justify;
 }
+
+.highlight {
+    font-weight: bold;
+}
+
+.highlight.c1:hover {
+    background-color: #61DBFB;
+}
+
+.highlight.c2:hover {
+    background-color: #F05340;
+}
+
+.highlight.c3:hover {
+    background-color: #a4a4a4;
+}
+
+.highlight.c4:hover {
+    background-color: #41B883;
+}
+
 
 /* Projects Section */
 .projects {
@@ -463,7 +435,6 @@ body {
     display: block;
 }
 
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .timeline-item {
@@ -585,4 +556,27 @@ body {
 
 .submit-btn:hover {
     background-color: var(--primary-color);
+}
+
+/* tech-stack */
+.terminal-box .category {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.terminal-box .icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 20px 20px;
+}
+
+.terminal-box .icons img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.2s ease;
+}
+
+.terminal-box .icons img:hover {
+    transform: scale(1.2);
 }
