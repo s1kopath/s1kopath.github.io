@@ -22,15 +22,6 @@ document.querySelector('.scroll-indicator').addEventListener('click', () => {
     aboutSection.scrollIntoView({ behavior: 'smooth' });
 });
 
-// Form Submission
-const contactForm = document.querySelector('.contact-form');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    alert('Thank you for your message! I will get back to you soon.');
-    contactForm.reset();
-});
-
 // Add smooth scrolling for all navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

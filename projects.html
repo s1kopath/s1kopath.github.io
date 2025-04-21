@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Projects - Web Developer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description"
+        content="Experienced Software Engineer specializing in PHP, Laravel, VueJs, ReactJs, NextJs, DBMS, Cloud and more. Helped 20+ Businesses turn ideas into scalable Web Solutions">
+    <meta name="keywords"
+        content="Software Developer, Web Developer, Md. Asaduzzaman, Laravel, PHP, Vue.js, React.js, Next.js, Nuxt.js, MySQL, PostgreSQL, Laravel Livewire, Filament PHP, Tailwind CSS, Bootstrap, jQuery, JavaScript">
+    <meta property="og:title" content="Md. Asaduzzaman - Software Engineer">
+    <meta property="og:site_name" content="Md. Asaduzzaman">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://s1kopath.github.io/assets/avatar.jpg">
+    <meta property="og:url" content="https://s1kopath.github.io">
+    <meta property="og:description"
+        content="Explore the portfolio and expertise of Md. Asaduzzaman, a dedicated Software Engineer specializing in modern web and app development.">
+
+    <!-- title & favicons -->
+    <title>Md. Asaduzzaman - Software Engineer</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicon_io/favicon.ico" type="image/x-icon">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- aos -->
+    <link href="assets/css/aos.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
+
 <body>
     <!-- Projects Header -->
     <header class="projects-header">
@@ -29,7 +63,8 @@
                     </div>
                     <div class="project-content">
                         <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with real-time inventory management and secure payment processing.</p>
+                        <p>A full-stack e-commerce solution with real-time inventory management and secure payment
+                            processing.</p>
                         <div class="project-tech">
                             <span>React</span>
                             <span>Node.js</span>
@@ -45,7 +80,8 @@
                     </div>
                     <div class="project-content">
                         <h3>Task Management App</h3>
-                        <p>A collaborative task management application with real-time updates and team collaboration features.</p>
+                        <p>A collaborative task management application with real-time updates and team collaboration
+                            features.</p>
                         <div class="project-tech">
                             <span>Vue.js</span>
                             <span>Express</span>
@@ -61,7 +97,8 @@
                     </div>
                     <div class="project-content">
                         <h3>Weather Dashboard</h3>
-                        <p>A weather forecasting application with interactive maps and detailed weather data visualization.</p>
+                        <p>A weather forecasting application with interactive maps and detailed weather data
+                            visualization.</p>
                         <div class="project-tech">
                             <span>JavaScript</span>
                             <span>Weather API</span>
@@ -123,13 +160,21 @@
         </div>
     </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/script.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed:', error);
+                    });
+            });
+        }
     </script>
 </body>
+
 </html>

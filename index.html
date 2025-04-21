@@ -17,9 +17,13 @@
     <meta property="og:description"
         content="Explore the portfolio and expertise of Md. Asaduzzaman, a dedicated Software Engineer specializing in modern web and app development.">
 
-    <!-- title & icons -->
+    <!-- title & favicons -->
     <title>Md. Asaduzzaman - Software Engineer</title>
-    <link rel="shortcut icon" href="assets/images/avatar.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicon_io/favicon.ico" type="image/x-icon">
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -229,24 +233,6 @@
                                 class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-image">
-                        <img src="assets/images/project2.svg" alt="Plant Shop Project">
-                    </div>
-                    <div class="project-content">
-                        <h3>Plant Shop</h3>
-                        <p>A single page e-commerce website with dynamic customization, multiple payment gateways, and
-                            delivery partner integration.</p>
-                        <div class="project-tech">
-                            <span>Laravel 11</span>
-                            <span>Vue 3</span>
-                            <span>InertiaJs</span>
-                            <span>SQL Server</span>
-                        </div>
-                        <a href="https://plantshop.qtecsolution.net" class="project-link" target="_blank">View Project
-                            <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
                 <div class="project-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="project-image">
                         <img src="assets/images/project4.svg" alt="Nagadhat Project">
@@ -275,32 +261,62 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container" data-aos="fade-up">
-            <h2>Get In Touch</h2>
+            <h2>Let's Keep in Touch</h2>
+            <p class="contact-description">
+                Stay updated on my latest projects, insights, and offerings. Whether you have questions, need advice, or
+                just want to chat, don't hesitate to reach out!
+            </p>
             <div class="contact-content">
                 <div class="social-links">
-                    <a href="https://github.com/s1kopath" class="social-link" data-aos="fade-up" data-aos-delay="100"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/asaduzzaman-arob" class="social-link" data-aos="fade-up"
-                        data-aos-delay="200"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/s1kopath" class="social-link" data-aos="flip-left" data-aos-delay="100"
+                        title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/asaduzzaman-arob" class="social-link" data-aos="flip-left"
+                        data-aos-delay="200" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:asaduzzaman.arob@gmail.com" class="social-link" data-aos="flip-left"
+                        data-aos-delay="300" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/8801762979871" class="social-link" data-aos="flip-left" data-aos-delay="400"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://t.me/+8801762979871" class="social-link" data-aos="flip-left" data-aos-delay="500"
+                        title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
                 </div>
-                <form class="contact-form" data-aos="fade-up">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+            </div>
+
+            <div class="signature" data-aos="fade-up">
+                <img src="assets/images/signature.png" alt="Signature" width="200">
+            </div>
+
+            <div class="copyright" data-aos="fade-up">
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear())</script> — Made by Md. Asaduzzaman
             </div>
         </div>
     </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/aos.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed:', error);
+                    });
+            });
+        }
+    </script>
 </body>
 
 </html>
