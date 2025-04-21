@@ -174,7 +174,6 @@ body {
     background-color: #41B883;
 }
 
-
 /* Projects Section */
 .projects {
     padding: 5rem 0;
@@ -194,78 +193,61 @@ body {
     margin-bottom: 3rem;
 }
 
-.project-card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.project-image {
+.projects-article-card {
     width: 100%;
-    height: 200px;
+    max-width: 350px;
+    height: 220px;
+    border-radius: 12px;
     overflow: hidden;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 300ms;
+    cursor: pointer;
 }
 
-.project-image img {
+@media (max-width: 768px) {
+    .projects-article-card {
+        height: 180px;
+    }
+}
+
+.projects-article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.projects-article-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: var(--transition);
 }
 
-.project-card:hover .project-image img {
-    transform: scale(1.05);
+.projects-article-card .content {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    padding: 30px 20px 20px 20px;
+    height: auto;
+    bottom: 0;
+    background: linear-gradient(transparent, rgb(0 0 0));
 }
 
-.project-content {
-    padding: 1.5rem;
+.projects-article-card .header,
+.projects-article-card .title {
+    margin: 0;
 }
 
-.project-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
+.projects-article-card .header {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4px;
 }
 
-.project-content p {
-    margin-bottom: 1.5rem;
-    color: #666;
-}
-
-.project-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.project-tech span {
-    background: #f8f8f8;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: var(--secondary-color);
-}
-
-.project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--secondary-color);
+.projects-article-card .title {
+    font-size: 17px;
+    color: #fff;
     text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.project-link:hover {
-    gap: 0.8rem;
 }
 
 .view-all-projects {
