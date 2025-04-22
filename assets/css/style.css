@@ -205,12 +205,6 @@ body {
     transition: all 300ms;
 }
 
-@media (max-width: 768px) {
-    .projects-article-card {
-        height: 180px;
-    }
-}
-
 .projects-article-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -220,6 +214,12 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.projects-article-card img:hover,
+.projects-article-card img:focus {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .projects-article-card .content {
