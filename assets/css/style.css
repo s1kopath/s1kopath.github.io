@@ -250,6 +250,11 @@ body {
     justify-content: space-between;
 }
 
+.projects-article-card .title a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
 .view-all-projects {
     text-align: center;
 }
